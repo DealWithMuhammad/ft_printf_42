@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_print_string.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muhahmad <muhahmad@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/20 16:01:40 by muhahmad          #+#    #+#             */
-/*   Updated: 2025/02/20 16:01:40 by muhahmad         ###   ########.fr       */
+/*   Created: 2025/02/22 11:49:29 by muhahmad          #+#    #+#             */
+/*   Updated: 2025/02/22 11:49:29 by muhahmad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-void ft_putchar(char c)
+int ft_print_string(char *str)
 {
-    write(1, &c, 1);
+    int i;
+    i = 0;
+    if (!str)
+    {
+        write(1, "(null)", 6);
+        return (6);
+    }
+
+    while (str[i])
+    {
+        i++;
+    }
+    write(1, str, i);
+    return (i);
 }

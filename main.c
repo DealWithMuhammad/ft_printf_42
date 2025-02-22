@@ -1,24 +1,10 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: muhahmad <muhahmad@student.42kl.edu.my>    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/20 11:43:04 by muhahmad          #+#    #+#             */
-/*   Updated: 2025/02/20 11:43:04 by muhahmad         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "ft_printf.h"
 
 int main()
 {
-    ft_putchar('H');
-    ft_putchar('e');
-    ft_putchar('l');
-    ft_putchar('l');
-    ft_putchar('o');
-    ft_putchar('\n');
-    return (0);
+    ft_printf("Char: %c\n", 'A');
+    ft_printf("String: %s\n", "Hello");
+    ft_printf("Decimal: %d, Hex: %x\n", 42, 42);
+    ft_printf("Pointer: %p\n", &main);
+    return 0;
 }
