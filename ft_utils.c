@@ -1,13 +1,13 @@
 #include "ft_printf.h"
 
-int count_digits(int n)
+int count_digits(unsigned int n)
 {
     if (n == 0)
-        return 1; // 0 ka 1 digit hota hai
+        return 1;
     int count = 0;
     while (n != 0)
     {
-        n /= 10; // 123 → 12 → 1 → 0
+        n /= 10;
         count++;
     }
     return count;
