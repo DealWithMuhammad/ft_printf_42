@@ -1,27 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muhahmad <muhahmad@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 11:43:04 by muhahmad          #+#    #+#             */
-/*   Updated: 2025/02/20 11:43:04 by muhahmad         ###   ########.fr       */
+/*   Updated: 2025/02/26 13:40:30 by muhahmad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-#include <stdarg.h>
-#include <unistd.h>
-
-int print_char(char c);
-int print_string(char *str);
-int ft_print_number(int n);
-int ft_print_unsigned(unsigned int n);
-int ft_print_hex(unsigned long n, int uppercase);
-// int ft_print_pointer(void *ptr);
-
+// 5
 int ft_printf(const char *format, ...)
 {
     va_list args;
@@ -43,8 +33,8 @@ int ft_printf(const char *format, ...)
                 total_printed += ft_print_unsigned(va_arg(args, unsigned int));
             else if (*format == 'x' || *format == 'X')
                 total_printed += ft_print_hex(va_arg(args, unsigned int), (*format == 'X'));
-            // else if (*format == 'p')
-            //     total_printed += ft_print_pointer(va_arg(args, void *));
+            else if (*format == 'p')
+                total_printed += ft_print_pointer(va_arg(args, void *));
             else if (*format == '%')
                 total_printed += ft_print_char('%');
             format++;
