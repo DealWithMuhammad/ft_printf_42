@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_utils.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: muhahmad <muhahmad@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/20 15:55:05 by muhahmad          #+#    #+#             */
+/*   Updated: 2025/03/20 15:55:07 by muhahmad         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 int count_digits(unsigned int n)
@@ -16,7 +28,7 @@ int count_digits(unsigned int n)
 int count_hex_digits(unsigned long n)
 {
     if (n == 0)
-        return 1; // 0 ka 1 digit
+        return 1;
     int count = 0;
     while (n != 0)
     {
