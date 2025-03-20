@@ -6,15 +6,15 @@
 /*   By: muhahmad <muhahmad@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/22 12:21:01 by muhahmad          #+#    #+#             */
-/*   Updated: 2025/03/20 15:54:21 by muhahmad         ###   ########.fr       */
+/*   Updated: 2025/03/20 17:47:56 by muhahmad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // for %c specifier
 #include "ft_printf.h"
 
-int ft_print_char(char c)
+int	ft_print_char(char c)
 {
-    write(1, &c, 1);
-    return (1);
+	write(1, &c, 1);
+	return (1);
 }
