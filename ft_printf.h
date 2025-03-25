@@ -29,7 +29,6 @@ int	ft_print_hex(unsigned long n, int uppercase);
 int	ft_print_pointer(void *ptr);
 
 // Utility
-int	count_digits(unsigned int n);
 
 int	count_hex_digits(unsigned long n);
 

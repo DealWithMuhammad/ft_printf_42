@@ -16,6 +16,9 @@
 int	ft_print_number(int n)
 {
 	char	c;
+	int count;
+
+	count = 0;
 
 	if (n == -2147483648)
 	{
@@ -25,11 +28,15 @@ int	ft_print_number(int n)
 	if (n < 0)
 	{
 		write(1, "-", 1);
-		return (1 + ft_print_number(-n));
+		n = -n;
+		count += 1;
 	}
 	if (n >= 10)
-		ft_print_number(n / 10);
+	{
+		 count += ft_print_number(n / 10);
+	}
 	c = (n % 10) + '0';
 	write(1, &c, 1);
-	return (count_digits(n));
+	count  += 1;
+	return (count);
 }

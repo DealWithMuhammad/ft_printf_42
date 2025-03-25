@@ -12,21 +12,6 @@
 
 #include "ft_printf.h"
 
-int	count_digits(unsigned int n)
-{
-	int	count;
-
-	if (n == 0)
-		return (1);
-	count = 0;
-	while (n != 0)
-	{
-		n /= 10;
-		count++;
-	}
-	return (count);
-}
-
 int	count_hex_digits(unsigned long n)
 {
 	int	count;
