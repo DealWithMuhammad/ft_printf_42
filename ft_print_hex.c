@@ -12,6 +12,21 @@
 
 #include "ft_printf.h"
 
+int	count_hex_digits(unsigned long n)
+{
+	int	count;
+
+	if (n == 0)
+		return (1);
+	count = 0;
+	while (n != 0)
+	{
+		n /= 16;
+		count++;
+	}
+	return (count);
+}
+
 int	ft_print_hex(unsigned long n, int uppercase)
 {
 	char	*hex_digits;
