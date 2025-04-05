@@ -6,7 +6,7 @@
 /*   By: muhahmad <muhahmad@student.42kl.edu.my>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/20 11:43:04 by muhahmad          #+#    #+#             */
-/*   Updated: 2025/03/20 18:00:49 by muhahmad         ###   ########.fr       */
+/*   Updated: 2025/04/03 14:48:06 by muhahmad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,3 +55,25 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (total_printed);
 }
+/*
+#include <stdio.h>
+int main()
+{
+    char name[50];
+    int age;
+
+ 
+    ft_printf("Enter your name: ");
+    scanf("%49s", name);
+    ft_printf("Enter your age: ");
+    scanf("%d", &age);
+
+   
+    ft_printf("Hello, %s!\n", name);
+    ft_printf("Your age is %d.\n", age);
+    ft_printf("Your memory address: %p\n", (void *)&age);
+    ft_printf("Your age in hexadecimal: %x\n", age);
+    ft_printf("Your age as unsigned integer: %u\n", (unsigned int)age);
+    ft_printf("Just a percent sign: %%\n");
+}
+*/
